@@ -12,7 +12,7 @@ pipeline {
 		 aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 585407675451.dkr.ecr.us-east-2.amazonaws.com
 		 docker build -t dockersample  .
 		 docker tag docker1:latest 585407675451.dkr.ecr.us-east-2.amazonaws.com/dockersample/docker1:${BUILD_NUMBER}
-docker push 585407675451.dkr.ecr.us-east-2.amazonaws.com/dockersample:${BUILD_NUMBER}
+                 docker push 585407675451.dkr.ecr.us-east-2.amazonaws.com/dockersample:${BUILD_NUMBER}
 		  '''
 	     }	         
 	   }
